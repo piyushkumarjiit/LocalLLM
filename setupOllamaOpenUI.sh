@@ -30,6 +30,7 @@ if [[ $curl_installed -gt 0 ]]
 then
 	echo "curl does not seem to be available. Trying to install curl."
 	sudo apt install -y curl
+	echo "curl is added."
 else
 	echo "curl is installed."
 fi
@@ -106,6 +107,7 @@ then
 	# For datacenter/nonvideo graphics cards
 	#sudo ubuntu-drivers install --gpgpu
 	#sudo reboot
+	echo "Nvidia driver installation complete."
 else
 	driver_version=$(nvidia-settings -v | grep version)
 	echo "Nvidia drivers are installed." $driver_version
@@ -130,6 +132,8 @@ then
 	sudo nvidia-ctk runtime configure --runtime=docker
 	echo "CTK runtime configured."
 	sudo systemctl restart docker
+	echo "Need to reboot the system. Powering off."
+	sudo poweroff
 else
 	echo "Nvidia Container toolkit is installed." 
 fi
