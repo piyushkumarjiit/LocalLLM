@@ -14,12 +14,13 @@ The script would check and install (if missing) below componenets:
 There might be need to disconnect and reconnect the session if installing Docker.
 Also if we install the Nvidia container toolkit, the script would force a system restart and needs to be reexecuted.
 <br/>
-## Installation 
-<br/>
+
+## Installation <br/>
+
 In order to execute the script, follow the steps below:
 <li> 1. Download the script: <br/>
-   wget https://raw.githubusercontent.com/piyushkumarjiit/DctmLifeScienceViaDocker/master/LS_on_Docker.sh </li>
+   <code> wget https://raw.githubusercontent.com/piyushkumarjiit/DctmLifeScienceViaDocker/master/LS_on_Docker.sh </code> </li>
 <li> 2. Grant necessary permission <br/>
-   chmod 755 setupOllamaOpenUI.sh </li>
+   <code> chmod 755 setupOllamaOpenUI.sh </code> </li>
 <li> 3. execute the script: <br/>
-   ./setupOllamaOpenUI.sh |& tee -a  setupOllamaOpenUI.log </li>
+   <code> ./setupOllamaOpenUI.sh |& tee -a  setupOllamaOpenUI.log </code> </li>
