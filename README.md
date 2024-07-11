@@ -1,7 +1,7 @@
-#LocalLLM
+# LocalLLM <br/>
 This script can be used to set up a local instance of LLMs. It currently supports Ollama, OpenWebUI and Llama 3.
 I tested this on my homelab (Dell R720 with Nvidia 1080TI in passthrough mode) and it works fine.
-
+<br/>
 The script would check and install (if missing) below componenets:
 <li>curl</li>
 <li>Docker</li>
@@ -14,11 +14,12 @@ The script would check and install (if missing) below componenets:
 There might be need to disconnect and reconnect the session if installing Docker.
 Also if we install the Nvidia container toolkit, the script would force a system restart and needs to be reexecuted.
 <br/>
-##Installation
+## Installation 
+<br/>
 In order to execute the script, follow the steps below:
-1. Download the script:
-   wget https://raw.githubusercontent.com/piyushkumarjiit/DctmLifeScienceViaDocker/master/LS_on_Docker.sh
-3. Grant necessary permission
-   chmod 755 setupOllamaOpenUI.sh
-5. execute the script:
-   ./setupOllamaOpenUI.sh |& tee -a  setupOllamaOpenUI.log
+<li> 1. Download the script: <br/>
+   wget https://raw.githubusercontent.com/piyushkumarjiit/DctmLifeScienceViaDocker/master/LS_on_Docker.sh </li>
+<li> 2. Grant necessary permission <br/>
+   chmod 755 setupOllamaOpenUI.sh </li>
+<li> 3. execute the script: <br/>
+   ./setupOllamaOpenUI.sh |& tee -a  setupOllamaOpenUI.log </li>
