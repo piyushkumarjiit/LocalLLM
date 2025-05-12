@@ -1,7 +1,7 @@
 # LocalLLM <br/>
 This script can be used to set up a local instance of LLMs. It currently supports Ollama, OpenWebUI and Llama 3.
 I tested this on my homelab (Dell R720 with Nvidia 1080TI in passthrough mode) and it works fine.
-Post install Ollama is accessible via Open WebUI on http://localhost:3000 (or http://<IP address of your VM>:3000)
+Post install Ollama is accessible via Open WebUI on http://localhost:3000 (or http://<IP_address_of_your_VM>:3000)
 <br/>
 The script would check and install (if missing) below componenets:
 <li>curl</li>
