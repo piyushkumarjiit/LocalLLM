@@ -133,7 +133,7 @@ then
 	echo "CTK runtime configured."
 	sudo systemctl restart docker
 	echo "Need to reboot the system before continuing. Powering off."
-	sudo poweroff
+	sudo reboot
 else
 	echo "Nvidia Container toolkit is installed." 
 fi
