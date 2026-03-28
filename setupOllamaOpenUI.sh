@@ -11,7 +11,7 @@
 set -e
 
 # Define the LLM model to run
-MODEL=llama3
+MODEL=qwen2.5:7b
 
 #Identify if it is Ubuntu or Centos/RHEL
 distro=$(cat /etc/*-release | awk '/ID=/ { print }' | head -n 1 | awk -F "=" '{print $2}' | sed -e 's/^"//' -e 's/"$//')
