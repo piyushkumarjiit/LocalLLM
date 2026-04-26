@@ -98,12 +98,17 @@ else
 fi
 
 # Check if Nvidia drivers are installed otherwise install it. Missing drivers leads to issues wtih ESXI console for the VM.
-drivers_installed=$(nvidia-settings -v > /dev/null 2>&1; echo $?)
+drivers_installed=$(nvidia-smi -v > /dev/null 2>&1; echo $?)
 if [[ $drivers_installed -gt 0 ]]
 then
 	echo "Nvidia drivers are not installed. Trying to install drivers."
-	# Nvidia driver installation
-	sudo ubuntu-drivers autoinstall
+	# Nvidia driver installation. Add the NVIDIA production repository (Recommended for latest CUDA/Drivers)
+	wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-keyring_1.1-1_all.deb
+	sudo dpkg -i cuda-keyring_1.1-1_all.deb
+	sudo apt update
+	sudo apt install -y nvidia-driver-570-server cuda-toolkit-12-8
+	sudo nvidia-smi -pm 1
+	#sudo ubuntu-drivers autoinstall
 	# For datacenter/nonvideo graphics cards
 	#sudo ubuntu-drivers install --gpgpu
 	#sudo reboot
